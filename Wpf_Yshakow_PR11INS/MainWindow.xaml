@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Button Content="Пример 1" Margin="10,10,628,347" Click="Button_Click"/>
+        <Button Content="Пример 2" Margin="196,10,442,347" Click="Button_Click_1"/>
+        <Button Content="Пример 3" Margin="373,10,264,347" Click="Button_Click_2"/>
+        <Button Content="Пример 4" Margin="552,10,83,347" Click="Button_Click_3"/>
+        <Button Content="Индивидуальное задание" Margin="286,101,326,252" Click="Button_Click_4"/>
     </Grid>
 </Window>
