@@ -51,8 +51,8 @@ namespace Wpf_Yshakow_PR11INS
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            Window4 window4 = new Window4();
-            window4.Show();
+            Window5 window5 = new Window5();
+            window5.Show();
         }
     }
 }

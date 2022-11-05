@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_Yshakow_PR11INS"
         mc:Ignorable="d"
-        Title="Window2" Height="450" Width="800">
+        Title="Window2" Height="450" Width="300">
     <Grid>
-        
+
+        <StackPanel Orientation="Vertical">
+            <TextBlock Margin="10,10,10,10" FontWeight="Bold"> Pick a color from below list</TextBlock>
+            <ListBox x:Name="mcListBox" Height="100" Width="100" Margin="10,10,0,0" HorizontalAlignment="Left">
+                <ListBoxItem>Orange</ListBoxItem>
+                <ListBoxItem>Green</ListBoxItem>
+                <ListBoxItem>Blue</ListBoxItem>
+                <ListBoxItem>Gray</ListBoxItem>
+                <ListBoxItem>LightGray</ListBoxItem>
+                <ListBoxItem>Red</ListBoxItem>
+            </ListBox>
+            <TextBox Height="23" Name="textbox1" Width="120" Margin="10,10,0,0" HorizontalAlignment="Left" >
+                <TextBox.Text>
+                    <Binding ElementName="mcListBox" Path="SelectedItem.Content"/>
+                </TextBox.Text>
+            </TextBox>
+            <Canvas Margin="10,10,0,0" Height="200" Width="200" HorizontalAlignment="Left">
+                <Canvas.Background>
+                    <Binding ElementName="mcListBox" Path="SelectedItem.Content"/>
+                </Canvas.Background>
+            </Canvas>
+        </StackPanel>
     </Grid>
 </Window>

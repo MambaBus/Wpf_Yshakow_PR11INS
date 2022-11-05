@@ -67,6 +67,9 @@
     <Compile Include="Window4.xaml.cs">
       <DependentUpon>Window4.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Window5.xaml.cs">
+      <DependentUpon>Window5.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -92,6 +95,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Window4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window5.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -121,6 +128,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Rejting-luchshego-kofe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="post_5cc16e65ddc17.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Freshly-Squeezed-Orange-Juice.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ad94dca432c8f5d06da27dc59f81ff6141f5c3e5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="iced-tea.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Moringa-Mango-Smoothie.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

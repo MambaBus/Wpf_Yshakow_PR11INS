@@ -4,6 +4,12 @@
              xmlns:local="clr-namespace:Wpf_Yshakow_PR11INS"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="{x:Type ListBoxItem}">
+            <Setter Property="ItemsControl.FontFamily" Value="Times New Roman"/>
+            <Setter Property="ItemsControl.FontSize" Value="14"/>
+            <Setter Property="ItemsControl.FontWeight" Value="Bold"/>
+            <Setter Property="ItemsControl.Background" Value="LightBlue"/>
+            <Setter Property="ItemsControl.Foreground" Value="Black"/>
+        </Style>
     </Application.Resources>
 </Application>

@@ -6,7 +6,49 @@
         xmlns:local="clr-namespace:Wpf_Yshakow_PR11INS"
         mc:Ignorable="d"
         Title="Window3" Height="450" Width="800">
+    <Window.Resources>
+        <LinearGradientBrush x:Key="DefautBrush">
+            <GradientStop Color="AliceBlue" Offset="0.2"/>
+            <GradientStop Color="Aquamarine" Offset="0.7"/>
+        </LinearGradientBrush>
+        <Style x:Key="{x:Type Button}">
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="Button.IsKeyboardFocused" Value="True"/>
+                        <Condition Property="Button.IsMouseOver" Value="True"/>
+                    </MultiTrigger.Conditions>
+                    <MultiTrigger.Setters>
+                        <Setter Property="ItemsControl.Width" Value="160"/>
+                        <Setter Property="ItemsControl.Height" Value="55"/>
+                        <Setter Property="ItemsControl.FontSize" Value="26"/>
+                    </MultiTrigger.Setters>
+                </MultiTrigger>
+
+                <Trigger Property="Control.IsMouseOver" Value="True">
+                    <Setter Property="ItemsControl.Foreground" Value="Red"/>
+                    <Setter Property="ItemsControl.RenderTransform">
+                        <Setter.Value>
+                            <RotateTransform Angle="10" CenterX="75" CenterY="25"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+            <Setter Property="ItemsControl.Width" Value="150"/>
+            <Setter Property="ItemsControl.Height" Value="50"/>
+            <Setter Property="ItemsControl.BorderThickness" Value="10"/>
+            <Setter Property="ItemsControl.FontFamily" Value="Times New Roman"/>
+            <Setter Property="ItemsControl.Background" Value="{StaticResource DefautBrush}"/>
+        </Style>
+    </Window.Resources>
+
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Column="0" Content="One"/>
+        <Button Grid.Column="1" Content="Two"/>
     </Grid>
 </Window>

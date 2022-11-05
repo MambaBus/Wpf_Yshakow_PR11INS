@@ -5,8 +5,79 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_Yshakow_PR11INS"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800">
-    <Grid>
-        
+        Title="Window1" Height="450" Width="300">
+    
+    <Window.Resources>
+        <SolidColorBrush x:Key="Red" Color="LightBlue"/>
+            <SolidColorBrush x:Key="Black" Color="Black"/>
+            <FontFamily x:Key="Times">Arial</FontFamily>
+            <FontWeight x:Key="Bold"/>
+            <Thickness x:Key="Min">14</Thickness>
+
+            <Style x:Key="ListBoxItemStyle">
+                <Setter Property="ItemsControl.FontFamily" Value="Times New Roman"/>
+                <Setter Property="ItemsControl.FontSize" Value="14"/>
+                <Setter Property="ItemsControl.FontWeight" Value="Bold"/>
+                <Setter Property="ItemsControl.Background" Value="{StaticResource Red}"/>
+                <Setter Property="ItemsControl.Foreground" Value="{StaticResource Black}"/>
+            </Style>
+        </Window.Resources>
+
+        <Grid>
+            <ListBox Margin="10,10,0,0" Name="listBox1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="212" Height="264">
+                <ListBoxItem Style="{StaticResource ListBoxItemStyle}">
+                    <CheckBox x:Name="CoffieCheckBox">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Rejting-luchshego-kofe.jpg" Width="30" Height="30"/>
+                            <TextBlock Text="Coffie"/>
+                        </StackPanel>
+                    </CheckBox>
+                </ListBoxItem>
+
+                <ListBoxItem Style="{StaticResource ListBoxItemStyle}">
+                    <CheckBox x:Name="TeaCheckBox">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="post_5cc16e65ddc17.jpg" Width="30" Height="30"/>
+                            <TextBlock Text="Tea"/>
+                        </StackPanel>
+                    </CheckBox>
+                </ListBoxItem>
+
+                <ListBoxItem Style="{StaticResource ListBoxItemStyle}">
+                    <CheckBox x:Name="OrangeJuiceCheckBox">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Freshly-Squeezed-Orange-Juice.jpg" Width="30" Height="30"/>
+                            <TextBlock Text="Orange Juice"/>
+                        </StackPanel>
+                    </CheckBox>
+                </ListBoxItem>
+
+                <ListBoxItem Style="{StaticResource ListBoxItemStyle}">
+                    <CheckBox x:Name="MilkCheckBox">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="ad94dca432c8f5d06da27dc59f81ff6141f5c3e5.jpg" Width="30" Height="30"/>
+                            <TextBlock Text="Milk"/>
+                        </StackPanel>
+                    </CheckBox>
+                </ListBoxItem>
+
+                <ListBoxItem Style="{StaticResource ListBoxItemStyle}">
+                    <CheckBox x:Name="IcedTeaCheckBox">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="iced-tea.jpg" Width="30" Height="30"/>
+                            <TextBlock Text="Iced Tea"/>
+                        </StackPanel>
+                    </CheckBox>
+                </ListBoxItem>
+
+                <ListBoxItem Style="{StaticResource ListBoxItemStyle}">
+                    <CheckBox x:Name="MangoShakeCheckBox">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Moringa-Mango-Smoothie.jpg" Width="30" Height="30"/>
+                            <TextBlock Text="Mango Shake"/>
+                        </StackPanel>
+                    </CheckBox>
+                </ListBoxItem>
+            </ListBox>
     </Grid>
 </Window>
