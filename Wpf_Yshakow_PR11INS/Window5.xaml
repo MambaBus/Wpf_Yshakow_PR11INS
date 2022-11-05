@@ -6,7 +6,95 @@
         xmlns:local="clr-namespace:Wpf_Yshakow_PR11INS"
         mc:Ignorable="d"
         Title="Window5" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="style1">
+            <Setter Property="Button.Background">
+                <Setter.Value>
+                    <LinearGradientBrush>
+                        <GradientStop Offset="0.5" Color="#FF00FF3A"/>
+                        <GradientStop Offset="0.5" Color="Black"/>
+                        <GradientStop Offset="1.2" Color="#FFC500FF"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Button.BorderBrush" Value="#FF0B0B21"/>
+            <Setter Property="Button.BorderThickness" Value="6"/>
+            <Style.Triggers>
+                <Trigger Property="Control.IsMouseOver" Value="True">
+                    <Setter Property="ItemsControl.RenderTransform">
+                        <Setter.Value>
+                            <RotateTransform Angle="35" CenterX="60" CenterY="50"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="style2">
+            <Setter Property="Button.Background" Value="#FFFF1700"/>
+            <Setter Property="Button.BorderBrush" Value="#FF1F0438"/>
+            <Setter Property="Button.BorderThickness" Value="2"/>
+            <Style.Triggers>
+                <Trigger Property="Control.IsMouseOver" Value="True">
+                    <Setter Property="Button.BorderThickness" Value="30"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="style3">
+            <Setter Property="Button.Background">
+                <Setter.Value>
+                    <LinearGradientBrush>
+                        <GradientStop Offset="0.5" Color="#FFFF01E8"/>
+                        <GradientStop Offset="1" Color="#FFD5B2FF"/>
+                        <GradientStop Offset="1" Color="#FF070CC1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Button.BorderBrush" Value="#FF83A1D6"/>
+            <Setter Property="Button.BorderThickness" Value="1"/>
+            <Style.Triggers>
+                <Trigger Property="Control.IsMouseOver" Value="True">
+                    <Setter Property="Button.Cursor" Value="Hand" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="style4">
+            <Setter Property="Button.Background" Value="#FF7588FF"/>
+            <Setter Property="Button.BorderBrush" Value="Black"/>
+            <Setter Property="Button.BorderThickness" Value="15"/>
+            <Style.Triggers>
+                <Trigger Property="Control.IsMouseOver" Value="True">
+                    <Setter Property="ItemsControl.RenderTransform">
+                        <Setter.Value>
+                            <RotateTransform Angle="-60" CenterX="15" CenterY="100"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox x:Name="FigureCount"
+                 ToolTip="Inter figure Count"
+                 Margin="5"
+                 Text="10"/>
+            <Button Grid.Column="1" Click="Button_Click">Generate Shapes</Button>
+        </Grid>
+
+        <Canvas x:Name="MainCanvas" Grid.Row="1" Margin="5"/>
+
     </Grid>
 </Window>
